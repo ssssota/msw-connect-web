@@ -1,6 +1,6 @@
 {
   "name": "msw-connect-web",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Mock Service Worker utility for connect-web",
   "main": "dist/cjs/index.js",
   "types": "dist/cjs/index.d.ts",
@@ -45,7 +45,12 @@
     "type": "git",
     "url": "git+https://github.com/ssssota/msw-connect-web.git"
   },
-  "keywords": ["msw", "connect-web", "grpc", "mock"],
+  "keywords": [
+    "msw",
+    "connect-web",
+    "grpc",
+    "mock"
+  ],
   "author": "TOMIKAWA Sotaro <tommysouta@gmail.com>",
   "license": "Apache-2.0",
   "bugs": {
