@@ -10,6 +10,7 @@ jobs:
     - uses: ./.github/actions/setup-node
     - name: Install Playwright Browsers
       run: pnpm dlx playwright install --with-deps
+    - run: pnpm build
     - name: Run Playwright tests
       run: pnpm test
     - uses: actions/upload-artifact@v3
