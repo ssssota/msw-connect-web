@@ -8,5 +8,12 @@
   },
   "formatter": {
     "enabled": true
+  },
+  "files": {
+    "ignore": [
+      "./dist/**/*",
+      "./e2e/src/gen/**/*",
+      "./e2e/public/**/*"
+    ]
   }
 }
