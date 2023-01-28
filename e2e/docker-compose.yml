@@ -1,0 +1,7 @@
+services:
+  buf:
+    build: .
+    volumes:
+      - type: bind
+        source: ./src
+        target: /app

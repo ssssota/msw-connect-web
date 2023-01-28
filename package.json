@@ -1,0 +1,54 @@
+{
+  "name": "msw-connect-web",
+  "version": "0.1.0",
+  "description": "Mock Service Worker utility for connect-web",
+  "main": "dist/cjs/index.js",
+  "types": "dist/cjs/index.d.ts",
+  "exports": {
+    ".": {
+      "types": {
+        "require": "./dist/cjs/index.d.ts",
+        "import": "./dist/esm/index.d.ts",
+        "node": "./dist/cjs/index.d.ts",
+        "default": "./dist/esm/index.d.ts"
+      },
+      "require": "./dist/cjs/index.js",
+      "import": "./dist/esm/index.js",
+      "node": "./dist/cjs/index.js",
+      "default": "./dist/esm/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "pnpm build:cjs && pnpm build:esm",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "build:esm": "tsc --module esnext --outDir dist/esm",
+    "prepack": "pnpm build",
+    "test": "pnpm -r test"
+  },
+  "devDependencies": {
+    "@bufbuild/protobuf": "^1.0.0",
+    "@changesets/cli": "^2.26.0",
+    "msw": "^1.0.0",
+    "rome": "^11.0.0",
+    "typescript": "^4.9.4",
+    "vite": "^4.0.4"
+  },
+  "peerDependencies": {
+    "msw": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssssota/msw-connect-web.git"
+  },
+  "keywords": ["msw", "connect-web", "grpc", "mock"],
+  "author": "TOMIKAWA Sotaro <tommysouta@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ssssota/msw-connect-web/issues"
+  },
+  "homepage": "https://github.com/ssssota/msw-connect-web#readme",
+  "packageManager": "pnpm@7.26.1"
+}
