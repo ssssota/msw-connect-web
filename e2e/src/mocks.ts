@@ -7,7 +7,10 @@ import { SayResponse } from "./gen/buf/connect/demo/eliza/v1/eliza_pb";
 const connect = createMswConnectWeb(baseUrl);
 
 export const worker = setupWorker(
-	connect(ElizaService, "say", (req) => {
-		return new SayResponse({ sentence: req.sentence });
+	connect(ElizaService, "say", async (req, res, ctx) => {
+		const requestMessage = await req.message();
+		return res(
+			ctx.message(new SayResponse({ sentence: requestMessage.sentence })),
+		);
 	}),
 );
