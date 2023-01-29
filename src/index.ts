@@ -1,5 +1,4 @@
-import type { MethodKind } from "@bufbuild/protobuf";
-import { ServiceType } from "@bufbuild/protobuf";
+import type { MethodKind, ServiceType } from "@bufbuild/protobuf";
 import {
 	ResponseComposition,
 	ResponseTransformer,
@@ -43,7 +42,7 @@ export const createMswConnectWeb: CreateMswConnectWeb = (baseUrl) => {
 				const exReq = new Proxy(req, {
 					get(target, p, receiver) {
 						if (p === "message") {
-							return () => target.json().then((j) => methodInfo.I.fromJson(j));
+							return () => target.json().then(methodInfo.I.fromJson);
 						}
 						return Reflect.get(target, p, receiver);
 					},

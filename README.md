@@ -2,7 +2,9 @@
 
 [Mock Service Worker](https://mswjs.io/) utility for [connect-web](https://github.com/bufbuild/connect-web).
 
-Streaming request and response are currently **not** supported.
+🚧 Streaming requests and responses are not currently supported.
+
+🚧 And server-side mocking is currently not supported either. (Because MSW has no support for Node.js `globalThis.fetch`. [mswjs/interceptors#283](https://github.com/mswjs/interceptors/pull/283))
 
 ## Usage
 
