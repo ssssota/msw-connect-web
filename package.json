@@ -2,20 +2,17 @@
   "name": "msw-connect-web",
   "version": "0.2.0",
   "description": "Mock Service Worker utility for connect-web",
-  "main": "dist/cjs/index.js",
-  "types": "dist/cjs/index.d.ts",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/cjs/index.d.ts",
   "exports": {
-    ".": {
-      "types": {
-        "require": "./dist/cjs/index.d.ts",
-        "import": "./dist/esm/index.d.ts",
-        "node": "./dist/cjs/index.d.ts",
-        "default": "./dist/esm/index.d.ts"
-      },
-      "require": "./dist/cjs/index.js",
-      "import": "./dist/esm/index.js",
-      "node": "./dist/cjs/index.js",
-      "default": "./dist/esm/index.js"
+    "require": {
+      "types": "./dist/cjs/index.js",
+      "default": "./dist/cjs/index.d.ts"
+    },
+    "default": {
+      "types": "./dist/esm/index.js",
+      "default": "./dist/esm/index.d.ts"
     }
   },
   "files": [
