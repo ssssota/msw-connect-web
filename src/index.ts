@@ -10,7 +10,11 @@ import {
 
 type PromiseOr<T> = T | Promise<T>;
 
-type CreateMswConnectWeb = (baseUrl: string) => <
+export type Options = {
+	baseUrl: string;
+};
+
+type CreateMswConnectWeb = (options: Options) => <
 	S extends ServiceType,
 	M extends Exclude<keyof S["methods"], symbol>,
 >(
@@ -29,7 +33,7 @@ type CreateMswConnectWeb = (baseUrl: string) => <
 		: never,
 ) => RestHandler;
 
-export const createMswConnectWeb: CreateMswConnectWeb = (baseUrl) => {
+export const createMswConnectWeb: CreateMswConnectWeb = ({ baseUrl }) => {
 	return (service, method, handler) => {
 		const methodInfo = service.methods[method];
 		return rest.post(
