@@ -4,7 +4,7 @@ import { baseUrl } from "./constants";
 import { ElizaService } from "./gen/buf/connect/demo/eliza/v1/eliza_connectweb";
 import { SayResponse } from "./gen/buf/connect/demo/eliza/v1/eliza_pb";
 
-const connect = createMswConnectWeb(baseUrl);
+const connect = createMswConnectWeb({ baseUrl });
 
 export const worker = setupWorker(
 	connect(ElizaService, "say", async (req, res, ctx) => {
