@@ -6,6 +6,8 @@
 
 🚧 And server-side mocking is currently not supported either. (Because MSW has no support for Node.js `globalThis.fetch`. [mswjs/interceptors#283](https://github.com/mswjs/interceptors/pull/283))
 
+If you want to mock on the server-side, you can use [connect-web-mock-interceptor](https://www.npmjs.com/package/connect-web-mock-interceptor).
+
 ## Usage
 
 Install package.
