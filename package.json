@@ -1,6 +1,6 @@
 {
   "name": "msw-connect-web",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Mock Service Worker utility for connect-web",
   "type": "module",
   "main": "./dist/cjs/index.js",
